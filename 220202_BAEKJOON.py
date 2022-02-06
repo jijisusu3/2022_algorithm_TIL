@@ -18,5 +18,3 @@ for i in scores:
 result = x/num
 print(result)
 
-
-# 8958
