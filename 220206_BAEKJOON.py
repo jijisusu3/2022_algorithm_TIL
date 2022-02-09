@@ -72,6 +72,7 @@
 
 # 9093번
 
+# 첫번째 풀이
 n = int(input())
 for i in range(n):
     string = input()
@@ -84,4 +85,12 @@ for i in range(n):
             while stack:
                 print(stack.pop(), end = '')
             print(' ', end = '')
+
+
+# 두번째 풀이
+n = int(input())
+for i in range(n):
+    string = list(input().split())
+    for j in string:
+        print(j[::-1], end = ' ')
 
