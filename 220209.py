@@ -29,8 +29,8 @@
 
 
 # # code up(3301): 거스름돈
-# change = int(input())
 
+# change = int(input())
 # num = 0
 # money = [50000, 10000, 5000, 1000, 500, 100, 50, 10]
 
@@ -42,14 +42,22 @@
 
 
 
-# BAEKJOON(1427): 소트인사이드
-num = input()
-result = ''
-temp_lst = [0]*10
-for i in num:
-    temp_lst[int(i)] += 1
-for j in range(len(temp_lst)-2, -1, -1):
-    count = temp_lst[j]
-    for _ in range(count):
-        result += str(j)
-print(int(result))
+# # BAEKJOON(1427): 소트인사이드
+
+# # Counting Sort  -> 백준 사이트에서 안됨... 왜 안되는지 너무 궁금
+# num = input()
+# temp_lst = [0]*10
+# for i in num:
+#     temp_lst[int(i)] += 1
+# for j in range(len(temp_lst)-1, 0, -1):
+#     for _ in range(temp_lst[j]):
+#         print(j, end='')
+
+
+# # 2. 그냥 풀기
+
+# num = input()
+# for i in range(9,-1,-1):
+#     for j in num:
+#         if int(j) == i:
+#             print(i, end='')
