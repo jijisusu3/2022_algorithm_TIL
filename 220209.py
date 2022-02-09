@@ -1,10 +1,55 @@
-# BAEKJOON(10989): 수 정렬하기 3
+# # BAEKJOON(10989): 수 정렬하기 3
 
-n = int(input())
-lst = []
-for _ in range(n):
-    lst.append(int(input()))
+# # Bubble Sort -> 백준에서는 메모리 초과 뜸
+# import sys
+# n = int(input())
+# lst = []
+# for _ in range(n):
+#     lst.append(int(sys.stdin.readline()))
+# for i in range(n-1, 0, -1):
+#     for j in range(0, i):
+#         if lst[j] > lst[j+1]:
+#             lst[j], lst[j+1] = lst[j+1], lst[j]
+# print(*lst, sep='\n')
 
-for i in range(len(lst)):
-    a = len(lst)-i # len(lst)가 10일 때, 9-8-7-6-5-4-3-2-1
+# # Counting Sort
+# import sys
+# n = int(sys.stdin.readline())
+# lst = [0]*10001
+# for _ in range(n):
+#     num = int(sys.stdin.readline())
+#     lst[num] += 1
+#
+# for i in range(1, 10001):
+#     count = lst[i]
+#     for _ in range(count):
+#         print(i)
 
+
+
+
+# # code up(3301): 거스름돈
+# change = int(input())
+
+# num = 0
+# money = [50000, 10000, 5000, 1000, 500, 100, 50, 10]
+
+# for i in money :
+#     num += change//i
+#     change = change%i
+
+# print(num)
+
+
+
+# BAEKJOON(1427): 소트인사이드
+num = input()
+result = ''
+temp_lst = [0]*10
+for i in num:
+    temp_lst[int(i)] += 1
+for j in range(len(temp_lst)-2, -1, -1):
+    count = temp_lst[j]
+    for _ in range(count):
+        result += str(j)
+print(int(result))
