@@ -44,20 +44,20 @@
 
 # # BAEKJOON(1427): 소트인사이드
 
-# # Counting Sort  -> 백준 사이트에서 안됨... 왜 안되는지 너무 궁금
-# num = input()
-# temp_lst = [0]*10
-# for i in num:
-#     temp_lst[int(i)] += 1
-# for j in range(len(temp_lst)-1, 0, -1):
-#     for _ in range(temp_lst[j]):
-#         print(j, end='')
+# Counting Sort  -> 백준 사이트에서 안됨... 왜 안되는지 너무 궁금
+num = input()
+temp_lst = [0]*10
+for i in num:
+    temp_lst[int(i)] += 1
+for j in range(len(temp_lst)-1, 0, -1):
+    for _ in range(temp_lst[j]):
+        print(j, end='')
 
 
 # # 2. 그냥 풀기
 
 # num = input()
-# for i in range(9,-1,-1):
+# for i in range(9, -1, -1):
 #     for j in num:
 #         if int(j) == i:
 #             print(i, end='')
