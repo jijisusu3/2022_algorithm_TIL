@@ -1,25 +1,25 @@
-# # code-up(1096) : 바둑판에 흰 돌 놓기
-#
-# arr = [[0]*19 for _ in range(19)]
-#
-# N = int(input())
-# for i in range(N):
-#     r, c = map(int, input().split())
-#     arr[r-1][c-1] = 1
-# for x in range(19):
-#     for y in range(19):
-#         print(arr[x][y], end = ' ')
-#     print()
+# code-up(1096) : 바둑판에 흰 돌 놓기
+
+arr = [[0]*19 for _ in range(19)]
+
+N = int(input())
+for i in range(N):
+    r, c = map(int, input().split())
+    arr[r-1][c-1] = 1
+for x in range(19):
+    for y in range(19):
+        print(arr[x][y], end = ' ')
+    print()
 
 
-# # BAEKJOON(10816): 숫자카드
-# n = int(input())
-# mine = list(map(int, input().split()))
-# m = int(input())
-# search = list(map(int, input().split()))
-#
-# mine.sort()
-#
+# BAEKJOON(10816): 숫자카드
+n = int(input())
+mine = list(map(int, input().split()))
+m = int(input())
+search = list(map(int, input().split()))
+
+mine.sort()
+
 
 
 
