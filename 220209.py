@@ -44,7 +44,7 @@
 
 # # BAEKJOON(1427): 소트인사이드
 
-# # Counting Sort  -> 백준 사이트에서 안됨... 왜 안되는지 너무 궁금
+# # Counting Sort
 # num = input()
 # temp_lst = [0]*10
 # for i in num:
