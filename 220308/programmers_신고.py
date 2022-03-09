@@ -1,5 +1,5 @@
 id_list = ["muzi", "frodo", "apeach", "neo"]
-report = ["muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi", "frodo neo"]
+report = ["muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi", "muzi frodo"]
 k = 2
 id_len = len(id_list)
 report = set(report)
@@ -13,26 +13,21 @@ for name in id_list:
         'num': 0,
     }
 
+ban = []
+
 for i in report:
     good, bad = i.split()
-    if bad not in dic[name]['complain']:
-        dic[good]['complain'].append(bad) # 신고자에게 신고한 사람 기록
-        dic['bad']['num'] += 1
-    if dic[name]["num"] == k:
+    dic[good]['complain'].append(bad) # 신고자에게 신고한 사람 기록
+    dic[bad]['num'] += 1
+    if dic[bad]["num"] == k:
+        ban.append(bad)
 
+letter = [0]*id_len
+idx = 0
+for x in id_list:
+    for y in ban:
+        if y in dic[x]['complain']:
+            letter[idx] += 1
+    idx += 1
 
-
-ban = []
-for x in range(id_len):
-    if com_lst[x] >= k:
-        ban.append(id_list[x])
-
-
-for i in range(len(report)):
-    good, bad = report[i].split()
-    if bad in ban:
-        for j in range(id_len):
-            if good == id_list[j]:
-                letter_list[j] += 1
-
-print(letter_list)
+print(letter)
