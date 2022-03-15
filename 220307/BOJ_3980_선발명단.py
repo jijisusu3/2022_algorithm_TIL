@@ -21,5 +21,3 @@ for tc in range(TC):
     add_power = 0
     dfs(0, 0)
     print(add_power)
-
-
