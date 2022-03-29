@@ -18,5 +18,3 @@ def bfs():
 N, K = map(int, input().split())
 lst = [0]*100001
 bfs()
-
-

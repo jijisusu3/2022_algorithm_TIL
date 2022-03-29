@@ -26,11 +26,9 @@ def robot(row, col, direction):
             robot(new_r, new_c, direction)
 
 
-
 N, M = map(int, input().split())
 r, c, d = map(int, input().split())
 arr = [list(map(int, input().split())) for _ in range(N)]
 result = 0
 robot(r, c, d)
 print(result)
-
