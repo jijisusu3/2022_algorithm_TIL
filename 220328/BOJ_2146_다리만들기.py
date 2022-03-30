@@ -6,6 +6,7 @@ def land(row, col):
     Q.append((row, col))
     while Q:
         a, b = Q.popleft()
+        nr = a +
 
 
 
