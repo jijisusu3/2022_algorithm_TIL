@@ -1,12 +1,9 @@
-# 퀵정렬
-
-
 def quick_sort(s, e):
     if s >= e: return
     # 파티션
     i, j = s, e
     while i < j:
-        while arr[s] >= arr[i]:  # 한쪽에만  = 조건 넣어줘야함
+        while i <= e and arr[s] >= arr[i]:
             i += 1
         while arr[s] < arr[j]:
             j -= 1
@@ -19,7 +16,8 @@ def quick_sort(s, e):
     quick_sort(j + 1, e)
 
 
-arr = [7, 34, 5, 76, 2, 1, 3, 19, 50]
+arr = [7, 5, 8, 4, 1, 2, 10, 4, 3, 6, 9, 8]
+# arr = [1, 1, 1, 1, 1, 0, 0, 0, 0, 0]
 N = len(arr)
 quick_sort(0, N - 1)
 print(arr)

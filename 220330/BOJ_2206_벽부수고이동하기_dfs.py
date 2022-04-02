@@ -29,6 +29,7 @@ def dfs(row, col, wall_cnt, cnt, arrive):
                     visited[nr][nc] = 1
                     dfs(nr, nc, wall_cnt, cnt + 1, 0)
                     visited[nr][nc] = 0
+    return
 
 
 N, M = map(int, input().split())
