@@ -17,7 +17,12 @@ def second(row):
 
 
 def subset(a, b):
-    global a_max, b_max
+    global max_num
+    a = sorted(a, reverse=True)
+    b = sorted(b, reverse=True)
+    while
+
+
 
 
 TC = int(input())
@@ -35,8 +40,7 @@ for tc in range(1, TC + 1):
                 temp_sum.append(arr[r][i])
             second(r)
             visited = [[0]*N for _ in range(N)]
-    a_max = 0
-    b_max = 0
+    max_num = 0
     for x in lst:
         A = x[:M]  # 첫번째 꿀 자리
         B = x[M:]  # 두번째 꿀 자리
