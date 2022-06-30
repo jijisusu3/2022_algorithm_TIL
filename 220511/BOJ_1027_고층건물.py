@@ -1,5 +1,3 @@
-
-
 def angle(x1, y1, x2, y2):  # 각도구하기!!!!
     return (y2 - y1) / (x2 - x1)
 
@@ -24,7 +22,6 @@ for y1 in buildings[1:]:  # 빌딩 순서대로 하나씩 가져와.
     left = 0
     standard_left = None
     for x2 in range(x1 - 1, 0, -1):
-        # if x2 == 0: break
         y2 = buildings[x2]
         temp = angle(x1, y1, x2, y2)
         if standard_left is None or standard_left > temp:  # None일 때는 처음! 처음일때는 항상 보임
@@ -36,4 +33,8 @@ for y1 in buildings[1:]:  # 빌딩 순서대로 하나씩 가져와.
 
 
 print(result)
+
+
+
+
 
